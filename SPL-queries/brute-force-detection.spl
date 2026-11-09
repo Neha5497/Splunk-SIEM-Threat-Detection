@@ -1,1 +1,5 @@
-Brute-force detection query
+index=main
+| search status="failed"
+| stats count by src_ip
+| where count >= 5
+| sort -count
