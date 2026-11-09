@@ -1,1 +1,10 @@
-Authentication event logs
+timestamp=2026-11-09T09:00:00 user=admin src_ip=198.51.100.24 action=login status=failed
+timestamp=2026-11-09T09:00:10 user=admin src_ip=198.51.100.24 action=login status=failed
+timestamp=2026-11-09T09:00:20 user=admin src_ip=198.51.100.24 action=login status=failed
+timestamp=2026-11-09T09:00:30 user=admin src_ip=198.51.100.24 action=login status=failed
+timestamp=2026-11-09T09:00:40 user=admin src_ip=198.51.100.24 action=login status=failed
+timestamp=2026-11-09T09:00:50 user=admin src_ip=198.51.100.24 action=login status=failed
+timestamp=2026-11-09T09:01:00 user=admin src_ip=198.51.100.24 action=login status=success
+timestamp=2026-11-09T09:05:00 user=john src_ip=203.0.113.50 action=login status=success
+timestamp=2026-11-09T09:06:00 user=john src_ip=203.0.113.50 action=login status=failed
+timestamp=2026-11-09T09:10:00 user=alice src_ip=203.0.113.50 action=login status=success
