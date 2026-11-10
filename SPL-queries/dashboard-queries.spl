@@ -1,0 +1,29 @@
+# Panel 1: Total Login Attempts
+# Description: Tracks overall authentication traffic volume in the network.
+action=login 
+| stats count as "Total Logins"
+
+-------------------------------------------------------------------------------
+
+# Panel 2: Failed Login Attempts
+# Description: Measures total authentication failures and security friction.
+action=login status=failed 
+| stats count as "Failed Logins"
+
+-------------------------------------------------------------------------------
+
+# Panel 3: Suspicious IP Addresses Ranking
+# Description: Identifies external source IPs generating the highest volume of login failures.
+action=login status=failed 
+| stats count by src_ip 
+| sort - count 
+| rename count as "Failure Count"
+
+-------------------------------------------------------------------------------
+
+# Panel 4: Possible Brute-Force Attacks (Threshold > 3)
+# Description: Flags high-confidence brute-force events where an IP exceeds 3 failures against a user.
+action=login status=failed 
+| stats count by src_ip user 
+| where count > 3 
+| rename count as "Failed Attempts"
