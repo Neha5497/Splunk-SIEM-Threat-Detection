@@ -68,21 +68,23 @@ Splunk-SIEM-Threat-Detection/
 ## Core SPL Threat Detection Queries (SPL-queries/)
 
 * **1.Brute-Force Detection Query:**
+```text
 action=login status=failed 
 | stats count by src_ip user 
 | where count > 3 
 | rename count as "Failed Attempts"
-
+```
 * **2.Suspicious IP Forensic Timeline:**
+```text
 src_ip="198.51.100.24" 
 | table timestamp user src_ip action status
-
+```
 ---
 
 ## Documentation & Reports
 
-Detailed forensic investigation workflows can be found in reports/investigation-process.md
+* **Detailed forensic investigation workflows can be found in reports/investigation-process.md**
 
-Full security incident write-ups are available in reports/incident-report.md
+* **Full security incident write-ups are available in reports/incident-report.md**
 
 
