@@ -15,7 +15,7 @@ This project simulates a real-world security incident inside an enterprise netwo
 ---
 
 ## 📂 Repository Structure
-
+```text
 Splunk-SIEM-Threat-Detection/
 │
 ├── sample-logs/
