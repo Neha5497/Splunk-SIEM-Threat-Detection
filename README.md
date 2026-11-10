@@ -35,7 +35,8 @@ Splunk-SIEM-Threat-Detection/
 │   ├── investigation-process.md
 │   └── incident-report.md
 │
-└── README.md
+└── README.md.
+```
 
 ---
 
